@@ -1,2 +1,2 @@
 # myfind
-A simple custom implementation of the find command on CLI
+A simple custom implementation of the CLI Find command on Linux
