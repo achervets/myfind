@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 
-import os, sys, argparse
+import os, argparse
 
 def main():
-    '''
-    if len(sys.argv) > 1:
-        print("Hello, " + sys.argv[1] + " World!")
-    else:
-        print("Hello World!")
-    '''
-    file_search(sys.argv[1])
+    args = argument_parser()
+    file_search(args.name)
 
-def file_search(target):
+def argument_parser():
+    parser = argparse.ArgumentParser(description="this script performs basic find functions on local filesystem")
+    parser.add_argument("name", help = "the name of the file you are searching for (not absolute)")
+    return parser.parse_args()
+
+# function that does the actual searching using os.walk()
+def file_search(name):
     cwd = os.getcwd()
     for dirpath, dirnames, filenames in os.walk(cwd):
-        if target in filenames:
-            print(os.path.join(dirpath, target))
+        if name in filenames:
+            print(os.path.join(dirpath, name))
 
 
 

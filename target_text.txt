@@ -1,0 +1,7 @@
+This is a test file for searching for lines inside of target file.
+
+
+Test Line
+
+Strawberry Fields
+----!!Blueberry Fields!!----
