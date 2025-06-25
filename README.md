@@ -7,12 +7,14 @@ Type -h or --help for available commands
 
 -h: the help option, descriptor
 
--d: directory to start searching in
+--dir: directory to start searching in
 
--n: filename to search for, including * wildcard
+--name: filename to search for, including * wildcard
 
 -r: recurse into subdirectories
 
 -f: print absolute file path
 
--g: search file name for a string and print if string is found
+--str: search file name for a string and only print filename if string is found
+
+-a: include all hidden directories in the search as well
