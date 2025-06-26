@@ -41,8 +41,8 @@ def file_search(args):
                     file_list.append(os.path.join(dirpath, name))
                 else:
                     file_list.append(name)
-            if args.r:
-                return file_list
+        if args.r:
+            return file_list
     return file_list
 
 def find_string(str, file):
